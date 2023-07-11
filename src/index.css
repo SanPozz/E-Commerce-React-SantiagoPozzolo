@@ -12,8 +12,33 @@ code {
     monospace;
 }
 
-ul {
-  list-style-type: none;
+.contenedor{
   display: flex;
-  flex-direction: row;
+  justify-content:space-between;
+  background-color: gray;
+  
+}
+
+ul{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  list-style: none; 
+}
+
+li{
+  margin: 0 20px 0 0;
+}
+
+a:hover{
+  color: red;
+}
+
+.cartlogo{
+  margin: 15px;
+  margin-top: 30px;
+}
+
+.greetings{
+  font-size: 5rem;
 }
