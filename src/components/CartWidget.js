@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 import cartLogo from '../assets/carro.png' ;
@@ -9,8 +11,11 @@ const CartWidget = () => {
     return (
 
         <div className='cartlogo'>
-            <img src={cartLogo} width={60} alt="" />
-            <span>{contadorCarrito}</span>
+            <ul>
+                <li><Link to={'/cart'}><img src={cartLogo} width={60} alt="" /></Link></li>
+            </ul>
+            
+            <span className='counter-nav'>{contadorCarrito}</span>
         </div>
     )
 };

@@ -1,14 +1,18 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 import CartWidget from "./CartWidget";
 import logo from "../assets/OnlySneakers.png";
+import ItemListContainer from './ItemListContainer';
 
 const NavBar = () => {
     return (
-        <div className="contenedor">
-                <img src={logo} width={150} alt="" />
+        <div className="contenedor navbar">
+                <Link to={'/'}><img src={logo} width={150} alt="" /></Link>
                 <ul>
-                    <li><a href="#Nike">Nike</a></li>
-                    <li><a href="#Adidas">Adidas</a></li>
-                    <li><a href="#Xclusive">Xxclusive</a></li>
+                    <li><Link to={'/category/Nike'} className='links'>Nike</Link></li>
+                    <li><Link to={'/category/Adidas'} className='links'>Adidas</Link></li>
+                    <li><Link to={'/category/Xclusive'} className='links'>Xclusive</Link></li>
                 </ul>
                 <CartWidget/>
         </div>
