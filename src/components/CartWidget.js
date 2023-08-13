@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Cart } from './Context/cartContext';
 
 import cartLogo from '../assets/carro.png' ;
 
 const CartWidget = () => {
 
-    const [contadorCarrito, setContCarrito] = useState(0);
+    const { cartCounter } = useContext(Cart)
 
     return (
 
@@ -15,7 +15,7 @@ const CartWidget = () => {
                 <li><Link to={'/cart'}><img src={cartLogo} width={60} alt="" /></Link></li>
             </ul>
             
-            <span className='counter-nav'>{contadorCarrito}</span>
+            <span className='counter-nav'>{cartCounter()}</span>
         </div>
     )
 };
